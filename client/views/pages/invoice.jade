@@ -1,0 +1,97 @@
+html
+  body
+    .page.page-invoice(data-ng-controller='invoiceCtrl')
+      .invoice-wrapper
+        section#invoice.invoice-container
+          .row
+            .col-xs-6
+              p.size-h2 {{main.brand}}
+              p.text-muted Responsive Admin App
+            .col-xs-6.text-right
+              p.size-h2 INVOICE NO. #4685357995
+              p 1st May 2014
+          hr
+          .row
+            .col-xs-6
+              | {{main.name}} 
+              br
+              |                     1234 Durfee Ave, El Monte CA, 91732 
+              br
+              |                     (626) 123-4567 
+              br
+              |                     mail@site.com
+            .col-xs-6.text-right
+              p
+                strong Order Details:
+              strong Date:
+              |  1st May 2014 
+              br
+              strong ID:
+              |  1357995 
+              br
+          .divider.divider-lg
+          table.table.table-bordered.table-striped
+            thead
+              tr.bg-dark
+                th.text-center #
+                th Product
+                th.text-center Unit Cost
+                th.text-center Quantity
+                th.text-center Total
+            tbody
+              tr
+                td.text-center 1
+                td Product One
+                td.text-center 100
+                td.text-center 1
+                td.text-center 100
+              tr
+                td.text-center 2
+                td Product Two
+                td.text-center 550
+                td.text-center 2
+                td.text-center 1100
+              tr
+                td.text-center 3
+                td Product Three
+                td.text-center 320
+                td.text-center 2
+                td.text-center 640
+              tr
+                td.text-center 4
+                td Product Four
+                td.text-center 80
+                td.text-center 5
+                td.text-center 400
+              tr
+                td.text-center 5
+                td Product Five
+                td.text-center 90
+                td.text-center 4
+                td.text-center 360
+              tr
+                td.text-center 6
+                td Product Six
+                td.text-center 35
+                td.text-center 4
+                td.text-center 140
+          .row
+            .col-xs-8
+              p.size-h3 Thanks for your business
+              ul
+                li Aeserunt tenetur cum nihil repudiandae perferendis fuga vitae corporis!
+                li Laborum, necessitatibus recusandae ullam at iusto dolore.
+                li Voluptatum aperiam voluptates quasi!
+                li Assumenda, iusto, consequuntur corporis atque culpa saepe magnam recusandae
+                li Possimus odio ipsam magni sint reiciendis unde amet
+            .col-xs-4.invoice-sum.text-right
+              ul.list-unstyled
+                li Sub - Total amount: $ 2740
+                li Discount: -----
+                li Tax (12%): #300
+                li
+                  strong Grand Total: $ 3040
+        section.text-center.no-print
+          a.btn.btn-primary.btn-lg.btn-w-lg(href='', ng-click='printInvoice()')
+            i.fa.fa-print
+            |  Print

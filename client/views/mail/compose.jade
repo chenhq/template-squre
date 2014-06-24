@@ -1,0 +1,89 @@
+html
+  body
+    .page
+      .row
+        .col-sm-3
+          section.panel.panel-default.mail-categories
+            .panel-heading
+              a.btn.btn-block.btn-lg.btn-primary(href='#/mail/compose') Compose
+            ul.list-group
+              li.list-group-item.active
+                a(href='javascript:;')
+                  i.fa.fa-inbox
+                  | Inbox
+                  span.badge.badge-info.pull-right 6
+              li.list-group-item
+                a(href='javascript:;')
+                  i.fa.fa-envelope-o
+                  | Send mail
+              li.list-group-item
+                a(href='javascript:;')
+                  i.fa.fa-star
+                  | Starred
+                  span.badge.badge-danger.pull-right 3
+              li.list-group-item
+                a(href='javascript:;')
+                  i.fa.fa-comment-o
+                  | Chat
+                  span.badge.badge-success.pull-right 9
+              li.list-group-item
+                a(href='javascript:;')
+                  i.fa.fa-pencil
+                  | Draft
+                  span.badge.badge-warning.pull-right 1
+              li.list-group-item
+                a(href='javascript:;')
+                  i.fa.fa-trash-o
+                  | Spam
+          section.panel.panel-default.mail-categories
+            .panel-heading Label
+            ul.list-group
+              li.list-group-item
+                a(href='javascript:;')
+                  | Work 
+                  i.fa.fa-circle.color-danger.pull-right
+              li.list-group-item
+                a(href='javascript:;')
+                  | Friends 
+                  i.fa.fa-circle.color-info.pull-right
+              li.list-group-item
+                a(href='javascript:;')
+                  | Family 
+                  i.fa.fa-circle.color-primary.pull-right
+              li.list-group-item
+                a(href='javascript:;')
+                  | Private 
+                  i.fa.fa-circle.color-warning.pull-right
+              li.list-group-item
+                a(href='javascript:;')
+                  | Classmates 
+                  i.fa.fa-circle.color-success.pull-right
+        .col-sm-9
+          section.panel.panel-default.mail-container.mail-compose
+            .panel-heading
+              strong
+                span.glyphicon.glyphicon-th
+                |  Compose Mail
+            .panel-body
+              form.form-horizontal
+                .form-group
+                  label.col-xs-2(for='mail_to') To:
+                  .col-xs-10
+                    input#mail_to.form-control(type='text')
+                .form-group
+                  label.col-xs-2(for='mail_cc') CC:
+                  .col-xs-10
+                    input#mail_cc.form-control(type='text')
+                .form-group
+                  label.col-xs-2(for='mail_bcc') BCC:
+                  .col-xs-10
+                    input#mail_bcc.form-control(type='text')
+                .form-group
+                  label.col-xs-2(for='mail_subject') Subject:
+                  .col-xs-10
+                    input#mail_subject.form-control(type='text')
+                .ui-editor(text-angular='', ng-model='mailContent')
+              .mail-actions
+                .btn.btn-sm.btn-primary Send
+                .btn.btn-sm.btn-default Draft
+                .btn.btn-sm.btn-default Discard

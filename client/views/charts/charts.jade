@@ -1,0 +1,96 @@
+html
+  body
+    .page.page-charts
+      section(data-ng-controller='chartCtrl')
+        .row
+          .col-sm-4
+            .panel.panel-default
+              .panel-heading
+                h3.panel-title Easy Pie Chart
+              .panel-body.text-center
+                .easypiechart(easypiechart='', options='easypiechart.options', percent='easypiechart.percent')
+                  span.pie-percent(ng-bind='easypiechart.percent')
+          .col-sm-4
+            .panel.panel-default
+              .panel-heading
+                h3.panel-title Easy Pie Chart
+              .panel-body.text-center
+                .easypiechart(easypiechart='', options='easypiechart2.options', percent='easypiechart2.percent')
+                  span.pie-percent(ng-bind='easypiechart2.percent')
+          .col-sm-4
+            .panel.panel-default
+              .panel-heading
+                h3.panel-title Easy Pie Chart
+              .panel-body.text-center
+                .easypiechart(easypiechart='', options='easypiechart3.options', percent='easypiechart3.percent')
+                  span.pie-percent(ng-bind='easypiechart3.percent')
+        .row
+          .col-md-4
+            .panel.panel-default
+              .panel-heading
+                h3.panel-title Gauge Chart
+              .panel-body.text-center
+                canvas(data-gauge-chart='', data-data='gaugeChart1.data', data-options='gaugeChart1.options', style='width: 220px; height: 110px; ')
+          .col-md-4
+            .panel.panel-default
+              .panel-heading
+                h3.panel-title Gauge Chart
+              .panel-body.text-center
+                canvas(data-gauge-chart='', data-data='gaugeChart2.data', data-options='gaugeChart2.options', style='width: 220px; height: 110px; ')
+          .col-md-4
+            .panel.panel-default
+              .panel-heading
+                h3.panel-title Gauge Chart
+              .panel-body.text-center
+                canvas(data-gauge-chart='', data-data='gaugeChart3.data', data-options='gaugeChart3.options', style='width: 220px; height: 110px; ')
+      section(data-ng-controller='sparklineCtrl')
+        section.panel.panel-default
+          .panel-heading
+            span.glyphicon.glyphicon-th
+            |  Mini Chart
+          table.table.table-bordered
+            thead
+              tr
+                th Graph
+                th Chart Type
+                th Description
+            tbody
+              tr
+                td
+                  span(data-sparkline='', data-data='simpleChart1.data', data-options='simpleChart1.options')
+                td Line Charts
+                td Default chart type
+              tr
+                td
+                  span(data-sparkline='', data-data='simpleChart2.data', data-options='simpleChart2.options')
+                td Bar Charts
+                td General chart type
+              tr
+                td
+                  span(data-sparkline='', data-data='simpleChart3.data', data-options='simpleChart3.options')
+                td Tristate Charts
+                td Useful for showing win-lose-draw information
+              tr
+                td
+                  span(data-sparkline='', data-data='tristateChart1.data', data-options='tristateChart1.options')
+                td Pie Charts
+                td General chart type
+        .row
+          .col-md-4
+            .panel.panel-default
+              .panel-heading
+                h3.panel-title Line Charts
+              .panel-body
+                div(data-sparkline='', data-data='largeChart1.data', data-options='largeChart1.options')
+          .col-md-4
+            .panel.panel-default
+              .panel-heading
+                h3.panel-title Bar Charts
+              .panel-body.text-center
+                div(data-sparkline='', data-data='largeChart2.data', data-options='largeChart2.options')
+          .col-md-4
+            .panel.panel-default
+              .panel-heading
+                h3.panel-title Pie Charts
+              .panel-body.text-center
+                div(data-sparkline='', data-data='largeChart3.data', data-options='largeChart3.options')

@@ -1,0 +1,283 @@
+html
+  body
+    .page.page-table
+      .panel.panel-default
+        .panel-heading
+          strong
+            span.glyphicon.glyphicon-th
+            |  Table - General
+        table.table
+          thead
+            tr
+              th #
+              th Project
+              th Status
+              th Manager
+              th Progress
+          tbody
+            tr
+              td 1
+              td
+                span.color-success
+                  i.fa.fa-level-up
+                |  TWLT
+              td
+                span.label.label-info Pending
+              td Amery Lee
+              td
+                progressbar.progressbar-xs.no-margin(value='55')
+            tr
+              td 2
+              td
+                span.color-success
+                  i.fa.fa-level-up
+                |  A16Z
+              td
+                span.label.label-primary Due
+              td Romayne Carlyn
+              td
+                progressbar.progressbar-xs.no-margin(value='34', type='success')
+            tr
+              td 3
+              td
+                span.color-warning
+                  i.fa.fa-level-down
+                |  DARK
+              td
+                span.label.label-success Due
+              td Marybeth Joanna
+              td
+                progressbar.progressbar-xs.no-margin(value='68', type='info')
+            tr
+              td 4
+              td
+                span.color-info
+                  i.fa.fa-level-up
+                |  Q300
+              td
+                span.label.label-danger Blocked
+              td Jonah Benny
+              td
+                progressbar.progressbar-xs.no-margin(value='52', type='warning')
+            tr
+              td 5
+              td
+                span.color-danger
+                  i.fa.fa-level-down
+                |  RVNG
+              td
+                span.label.label-warning Suspended
+              td Daly Royle
+              td
+                progressbar.progressbar-xs.no-margin(value='77', type='danger')
+            tr
+              td 6
+              td
+                span.color-info
+                  i.fa.fa-level-down
+                |  FDSA
+              td
+                span.label.label-info Suspended
+              td Jane Swift
+              td
+                progressbar.progressbar-xs.no-margin(value='55', type='success')
+      .row
+        .col-md-6
+          .panel.panel-default
+            .panel-heading
+              strong
+                span.glyphicon.glyphicon-th
+                |  Table - Basic
+            .panel-body
+              table.table
+                thead
+                  tr
+                    th #
+                    th Table heading
+                    th Table heading
+                    th Table heading
+                tbody
+                  tr
+                    td Table cell
+                    td Table cell
+                    td Table cell
+                    td Table cell
+                  tr
+                    td Table cell
+                    td Table cell
+                    td Table cell
+                    td Table cell
+                  tr
+                    td Table cell
+                    td Table cell
+                    td Table cell
+                    td Table cell
+          .panel.panel-default
+            .panel-heading
+              strong
+                span.glyphicon.glyphicon-th
+                |  Table - No paddding
+            table.table
+              thead
+                tr
+                  th #
+                  th Table heading
+                  th Table heading
+                  th Table heading
+              tbody
+                tr
+                  td Table cell
+                  td Table cell
+                  td Table cell
+                  td Table cell
+                tr
+                  td Table cell
+                  td Table cell
+                  td Table cell
+                  td Table cell
+                tr
+                  td Table cell
+                  td(colspan='2') Table cell
+                  td Table cell
+          .panel.panel-default
+            .panel-heading
+              strong
+                span.glyphicon.glyphicon-th
+                |  Bordered table
+            .panel-body
+              table.table.table-bordered
+                thead
+                  tr
+                    th #
+                    th Table heading
+                    th Table heading
+                    th Table heading
+                tbody
+                  tr
+                    td(rowspan='2') Table cell
+                    td Table cell
+                    td Table cell
+                    td Table cell
+                  tr
+                    td Table cell
+                    td Table cell
+                    td Table cell
+                  tr
+                    td Table cell
+                    td Table cell
+                    td Table cell
+                    td Table cell
+                  tr
+                    td Table cell
+                    td(colspan='2') Table cell
+                    td Table cell
+        .col-md-6
+          .panel.panel-default
+            .panel-heading
+              strong
+                span.glyphicon.glyphicon-th
+                |  Striped table
+            .panel-body
+              table.table.table-striped
+                thead
+                  tr
+                    th #
+                    th Table heading
+                    th Table heading
+                    th Table heading
+                tbody
+                  tr
+                    td Table cell
+                    td Table cell
+                    td Table cell
+                    td Table cell
+                  tr
+                    td Table cell
+                    td Table cell
+                    td Table cell
+                    td Table cell
+                  tr
+                    td Table cell
+                    td Table cell
+                    td Table cell
+                    td Table cell
+          .panel.panel-default
+            .panel-heading
+              strong
+                span.glyphicon.glyphicon-th
+                |  Hover row
+            .panel-body
+              table.table.table-hover
+                thead
+                  tr
+                    th #
+                    th Table heading
+                    th Table heading
+                    th Table heading
+                tbody
+                  tr
+                    td Table cell
+                    td Table cell
+                    td Table cell
+                    td Table cell
+                  tr
+                    td Table cell
+                    td Table cell
+                    td Table cell
+                    td Table cell
+                  tr
+                    td Table cell
+                    td(colspan='2') Table cell
+                    td Table cell
+          .panel.panel-default
+            .panel-heading
+              strong
+                span.glyphicon.glyphicon-th
+                |  Contextual Table
+            .panel-body
+              table.table
+                thead
+                  tr
+                    th #
+                    th Column heading
+                    th Column heading
+                    th Column heading
+                tbody
+                  tr.active
+                    td Table cell
+                    td Column content
+                    td Column content
+                    td Column content
+                  tr
+                    td Table cell
+                    td Column content
+                    td Column content
+                    td Column content
+                  tr.success
+                    td Table cell
+                    td Column content
+                    td Column content
+                    td Column content
+                  tr
+                    td Table cell
+                    td Column content
+                    td Column content
+                    td Column content
+                  tr.warning
+                    td Table cell
+                    td Column content
+                    td Column content
+                    td Column content
+                  tr
+                    td Table cell
+                    td Column content
+                    td Column content
+                    td Column content
+                  tr.danger
+                    td Table cell
+                    td Column content
+                    td Column content
+                    td Column content
+      .row
+        .col-md-6
+        .col-md-6

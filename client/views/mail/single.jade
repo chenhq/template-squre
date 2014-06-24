@@ -1,0 +1,119 @@
+html
+  body
+    .page
+      .row
+        .col-sm-3
+          section.panel.panel-default.mail-categories
+            .panel-heading
+              a.btn.btn-block.btn-lg.btn-primary(href='#/mail/compose') Compose
+            ul.list-group
+              li.list-group-item.active
+                a(href='javascript:;')
+                  i.fa.fa-inbox
+                  | Inbox
+                  span.badge.badge-info.pull-right 6
+              li.list-group-item
+                a(href='javascript:;')
+                  i.fa.fa-envelope-o
+                  | Send mail
+              li.list-group-item
+                a(href='javascript:;')
+                  i.fa.fa-star
+                  | Starred
+                  span.badge.badge-danger.pull-right 3
+              li.list-group-item
+                a(href='javascript:;')
+                  i.fa.fa-comment-o
+                  | Chat
+                  span.badge.badge-success.pull-right 9
+              li.list-group-item
+                a(href='javascript:;')
+                  i.fa.fa-pencil
+                  | Draft
+                  span.badge.badge-warning.pull-right 1
+              li.list-group-item
+                a(href='javascript:;')
+                  i.fa.fa-trash-o
+                  | Spam
+          section.panel.panel-default.mail-categories
+            .panel-heading Label
+            ul.list-group
+              li.list-group-item
+                a(href='javascript:;')
+                  | Work 
+                  i.fa.fa-circle.color-danger.pull-right
+              li.list-group-item
+                a(href='javascript:;')
+                  | Friends 
+                  i.fa.fa-circle.color-info.pull-right
+              li.list-group-item
+                a(href='javascript:;')
+                  | Family 
+                  i.fa.fa-circle.color-primary.pull-right
+              li.list-group-item
+                a(href='javascript:;')
+                  | Private 
+                  i.fa.fa-circle.color-warning.pull-right
+              li.list-group-item
+                a(href='javascript:;')
+                  | Classmates 
+                  i.fa.fa-circle.color-success.pull-right
+        .col-sm-9
+          section.panel.panel-default.mail-container
+            .panel-heading
+              strong
+                span.glyphicon.glyphicon-th
+                |  View Mail
+            .panel-body
+              .mail-header.row
+                .col-md-8
+                  h3 Nice to meet you
+                .col-md-4
+                  .pull-right
+                    a.btn.btn-sm.btn-primary(href='#/mail/compose')
+                      | Reply 
+                      i.fa.fa-mail-reply
+                    a.btn.btn-sm.btn-default(href='javascript:;')
+                      i.fa.fa-print
+                    a.btn.btn-sm.btn-default(href='javascript:;')
+                      i.fa.fa-trash-o
+              .mail-info
+                .row
+                  .col-md-8
+                    strong Jane Swift
+                    |  (jane@swift.com) to
+                    strong me
+                  .col-md-4
+                    .pull-right
+                      | 2/11/14 2:11 PM
+              .mail-content
+                p
+                  | Quo, animi, reprehenderit, dolorem obcaecati reiciendis quasi accusamus totam alias sapiente sint tempore quam adipisci temporibus unde odit eveniet eum molestias! Esse, hic ut maxime animi et! Dolores, cum libero pariatur facere nesciunt tempore. Expedita, vel, ut illo magni quis suscipit nisi deserunt enim eaque veniam.
+                blockquote
+                  | Ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, error, nulla, quia, neque est animi necessitatibus qui vero beatae quae ut laudantium facere consequuntur maiores cupiditate amet vitae magni nihil!
+                  small Someone famous
+                p
+                  | Officiis, tempore, unde, sint in ut neque alias ad est ex fugit odio nobis nemo dolorem aperiam labore ipsam sapiente optio nostrum perferendis ab. Molestias,
+                p
+                  | sit, dolorem consequuntur vel quibusdam illum veniam veritatis vitae blanditiis officiis ducimus voluptatibus omnis cum quae tempore porro reiciendis animi dignissimos optio rem laborum eius magnam. Esse, accusantium quia deleniti fugiat commodi architecto itaque nulla in. Consequatur beatae non explicabo in qui aspernatur deleniti quas doloribus!
+                p
+                  | Aperiam, veniam, quae temporibus ratione suscipit accusantium provident amet deserunt natus veritatis ipsa error accusamus saepe debitis quisquam labore facilis magnam impedit minus explicabo quidem dicta ipsam nam velit quasi esse ad culpa sequi dolorum eaque. Iste exercitationem facilis nemo aut quae! Sit?
+              .mail-attachments
+                p
+                  i.fa.fa-paperclip
+                  |  2 attachements | 
+                  a(href='javascript:;') Save all attachements
+                ul.list-unstyled.list-inline.list-attachs
+                  li
+                    a(href='javascript:;')
+                      img(src='images/assets/600_400-1.jpg', alt='')
+                  li
+                    a(href='javascript:;')
+                      img(src='images/assets/600_400-2.jpg', alt='')
+              .mail-actions
+                a.btn.btn-sm.btn-primary(href='#/mail/compose')
+                  | Reply 
+                  i.fa.fa-mail-reply
+                a.btn.btn-sm.btn-default(href='#/mail/compose')
+                  | Forward 
+                  i.fa.fa-mail-forward

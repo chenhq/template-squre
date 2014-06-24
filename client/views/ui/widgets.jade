@@ -1,0 +1,416 @@
+html
+  body
+    .page.page-general
+      .row
+        .col-md-12
+          ul.nav.nav-boxed.nav-justified
+            li
+              a(href='javascript:;')
+                i.color-success.fa.fa-home
+                |  Home
+            li
+              a(href='javascript:;')
+                i.color-warning.fa.fa-music
+                |  Music
+            li
+              a(href='javascript:;')
+                i.color-danger.fa.fa-film
+                |  Film
+            li
+              a(href='javascript:;')
+                i.color-info.fa.fa-bookmark
+                |  Bookmark
+            li
+              a(href='javascript:;')
+                i.color-primary.fa.fa-camera
+                |  Photo
+            li
+              a(href='javascript:;')
+                i.color-info-alt.fa.fa-map-marker
+                |  Map
+            li
+              a(href='javascript:;')
+                i.color-gray.fa.fa-phone-square
+                |  Phone
+      br
+      .row
+        .col-md-6
+          section.panel.panel-box
+            .panel-top.bg-success
+              .text-left
+                | Cloudy
+              .divider.divider-lg
+              .divider.divider-lg
+            .panel-icon.bg-success
+              i.wi-day-cloudy
+            .panel-bottom.bg-reverse
+              ul.list-justified.text-center
+                li
+                  p.size-h2.color-info
+                    i.wi-cloudy
+                  p.text-muted Tuesday
+                li
+                  p.size-h2.color-warning
+                    i.wi-day-thunderstorm
+                  p.text-muted Wednesday
+                li
+                  p.size-h2.color-danger
+                    i.wi-day-snow
+                  p.text-muted Thursday
+                li
+                  p.size-h2.color-success
+                    i.wi-day-sunny
+                  p.text-muted Friday
+          // profile panel
+          .panel.panel-profile
+            .panel-heading.text-center.bg-info
+              img.img-circle.img80_80(alt='', src='images/g1.jpg')
+              h3 {{main.name}}
+              p Project Manager
+            .list-justified-container
+              ul.list-justified.text-center
+                li
+                  p.size-h3 679
+                  p.text-muted Tweets
+                li
+                  p.size-h3 575
+                  p.text-muted Followers
+                li
+                  p.size-h3 23
+                  p.text-muted Following
+          // end profile panel
+          // mini box
+          .row
+            .col-sm-6
+              .panel.mini-box
+                span.box-icon.bg-danger
+                  i.fa.fa-film
+                .box-info
+                  p.size-h2 39
+                  p.text-muted Amazing Films
+            .col-sm-6
+              .panel.mini-box
+                span.box-icon.bg-warning
+                  i.fa.fa-camera
+                .box-info
+                  p.size-h2 63
+                  p.text-muted Wonderful Photos
+          .row
+            .col-sm-6
+              .panel.mini-box
+                span.box-icon.bg-success
+                  i.fa.fa-bookmark-o
+                .box-info
+                  p.size-h2 55
+                  p.text-muted New Collections
+            .col-sm-6
+              .panel.mini-box
+                span.box-icon.bg-info
+                  i.fa.fa-check
+                .box-info
+                  p.size-h2 34
+                  p.text-muted Tasks Finised
+          // end mini box
+          // List group
+          .panel.panel-default
+            .panel-heading
+              strong
+                span.glyphicon.glyphicon-th
+                |  List group
+            ul.list-group
+              li.list-group-item
+                span.badge 14
+                |                         Cras justo odio
+              li.list-group-item
+                span.badge.badge-warning 2
+                |                         Dapibus ac facilisis in
+              li.list-group-item
+                span.badge.badge-info 1
+                |                         Morbi leo risus
+              li.list-group-item
+                span.badge.badge-success 3
+                |                         Vestibulum at eros
+              li.list-group-item
+                span.badge.badge-danger 5
+                |                         Porta ac consectetur ac
+          // end List group
+          // Panel box vertical
+          .row
+            .col-sm-6
+              section.panel.panel-box
+                .panel-top.bg-success
+                  i.fa.fa-shopping-cart.text-large
+                .panel-bottom.bg-reverse
+                  p.size-h1 369
+                  p.text-muted Sales
+            .col-sm-6
+              section.panel.panel-box
+                .panel-top.bg-danger
+                  i.fa.fa-user.text-large
+                .panel-bottom.bg-reverse
+                  p.size-h1 231
+                  p.text-muted New Users
+          .row
+            .col-sm-6
+              section.panel.panel-box
+                .panel-top.bg-warning
+                  i.fa.fa-usd.text-large
+                .panel-bottom.bg-reverse
+                  p.size-h1 4 600
+                  p.text-muted Profit
+            .col-sm-6
+              section.panel.panel-box
+                .panel-top.bg-info
+                  i.fa.fa-comments-o.text-large
+                .panel-bottom.bg-reverse
+                  p.size-h1 56
+                  p.text-muted New Messages
+          .row
+            .col-sm-6
+              section.panel.panel-box
+                .panel-top.bg-facebook
+                  .divider.divider
+                  i.fa.fa-facebook.size-h1
+                  .divider.divider
+                .list-justified-container
+                  ul.list-justified.text-center
+                    li
+                      p.size-h3 575
+                      p.text-muted Followers
+                    li
+                      p.size-h3 23
+                      p.text-muted Following
+            .col-sm-6
+              section.panel.panel-box
+                .panel-top.bg-twitter
+                  .divider.divider
+                  i.fa.fa-twitter.size-h1
+                  .divider.divider
+                .list-justified-container
+                  ul.list-justified.text-center
+                    li
+                      p.size-h3 575
+                      p.text-muted Followers
+                    li
+                      p.size-h3 23
+                      p.text-muted Following
+          // end Panel box vertical
+          // Breadcrumbs
+          .panel.panel-default
+            .panel-heading
+              strong
+                span.glyphicon.glyphicon-th
+                |  Breadcrumbs
+            .panel-body
+              ol.breadcrumb
+                li
+                  a(href='javascript:;') Home
+                li
+                  a(href='javascript:;') Library
+                li.active Data
+              ol.breadcrumb-alt
+                li
+                  a(href='javascript:;') Home
+                li
+                  a(href='javascript:;') Library
+                li.active
+                  a(href='') Data
+          // end Breadcrumbs
+          // Media object
+          .panel.panel-default
+            .panel-heading
+              strong
+                span.glyphicon.glyphicon-th
+                |  Media object
+            .panel-body
+              .media
+                a.pull-left(href='javascript:;')
+                  img.img-rounded.img64_64(alt='', src='images/g1.jpg')
+                .media-body
+                  h4.media-heading Media heading
+                  p
+                    | Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce cfelis in faucibus.
+              .media
+                a.pull-left(href='javascript:;')
+                  img.img-rounded.img64_64(alt='', src='images/g1.jpg')
+                .media-body
+                  h4.media-heading Media heading
+                  p
+                    | Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at. Donec lacinia congue felis in faucibus.
+                  .media
+                    a.pull-left(href='javascript:;')
+                      img.img-rounded.img64_64(alt='', src='images/g1.jpg')
+                    .media-body
+                      h4.media-heading Media heading
+                      p
+                        | Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus  Donec lacinia congue felis in faucibus.
+          // end Media object
+        .col-md-6
+          // Pofile panel
+          .panel.panel-profile
+            .panel-heading.bg-primary.clearfix
+              a.pull-left.profile(href='')
+                img.img-circle.img80_80(alt='', src='images/g1.jpg')
+              h3 {{main.name}}
+              p Project Manager
+            ul.list-group
+              li.list-group-item
+                span.badge 14
+                i.fa.fa-envelope-o
+                |                         Cras justo odio
+              li.list-group-item
+                span.badge.badge-warning 2
+                i.fa.fa-comments-o
+                |                         Dapibus ac facilisis in
+              li.list-group-item
+                span.badge.badge-info 1
+                i.fa.fa-heart-o
+                |                         Morbi leo risus
+              li.list-group-item
+                span.badge.badge-success 3
+                i.fa.fa-folder-open-o
+                |                         Vestibulum at eros
+          // end Pofile panel
+          // Panel box
+          section.panel.panel-box
+            .panel-left.panel-item.bg-facebook
+              p.size-h1
+                i.fa.fa-facebook
+              p Facebook
+            .panel-item.bg-twitter
+              p.size-h1
+                i.fa.fa-twitter
+              p Twitter
+            .panel-right.panel-item.bg-google-plus
+              p.size-h1
+                i.fa.fa-google-plus
+              p Google Plus
+          section.panel.panel-box
+            .panel-left.panel-item.bg-info
+              i.fa.fa-sun-o.text-huge
+            .panel-right.panel-item.bg-reverse
+              p.size-h1 66&ordm;
+              p.text-muted Another Sunny Day
+          section.panel.panel-box
+            .panel-left.panel-item.bg-reverse
+              p.size-h1 59&ordm;
+              p.text-muted Cloudy Day
+            .panel-right.panel-item.bg-success
+              i.fa.fa-cloud.text-huge
+          section.panel.panel-box
+            .panel-left.panel-item.bg-warning
+              i.fa.fa-heart.text-huge
+            .panel-right.panel-item.bg-reverse
+              p.size-h1 56
+              p.text-muted Gifts Received
+          .row
+            .col-xs-6
+              section.panel.panel-box.info-box
+                .panel-left.panel-item.bg-success
+                  i.fa.fa-rocket.text-large.stat-icon
+                .panel-right.panel-item.bg-reverse
+                  p.size-h1.no-margin
+                    | 80
+                    span.size-h3 %
+                  p.text-muted.no-margin
+                    span(data-i18n='Growth')
+            .col-xs-6
+              section.panel.panel-box.info-box
+                .panel-left.panel-item.bg-info
+                  i.fa.fa-users.text-large.stat-icon
+                .panel-right.panel-item.bg-reverse
+                  p.size-h1.no-margin 132
+                  p.text-muted.no-margin
+                    span(data-i18n='New users')
+            .col-xs-6
+              section.panel.panel-box.info-box
+                .panel-left.panel-item.bg-warning
+                  i.fa.fa-dollar.text-large.stat-icon
+                .panel-right.panel-item.bg-reverse
+                  p.size-h1.no-margin 3,760
+                  p.text-muted.no-margin
+                    span(data-i18n='Profit')
+            .col-xs-6
+              section.panel.panel-box.info-box
+                .panel-left.panel-item.bg-danger
+                  i.fa.fa-shopping-cart.text-large.stat-icon
+                .panel-right.panel-item.bg-reverse
+                  p.size-h1.no-margin 369
+                  p.text-muted.no-margin
+                    span(data-i18n='Sales')
+          // end Panel box
+          // Thumbnails
+          .panel.panel-default
+            .panel-heading
+              strong
+                span.glyphicon.glyphicon-th
+                |  Thumbnails
+            .panel-body
+              .row
+                .col-sm-6
+                  .thumbnail
+                    img(alt='', src='images/assets/600_400-1.jpg')
+                    .caption
+                      h3 Thumbnail label
+                      p
+                        | Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                      p
+                        a.btn.btn-primary(href='javascript:;', role='button') Button
+                        a.btn.btn-default(href='javascript:;', role='button') Button
+                .col-sm-6
+                  .thumbnail
+                    img(alt='', src='images/assets/600_400-2.jpg')
+                    .caption
+                      h3 Thumbnail label
+                      p
+                        | Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                      p
+                        a.btn.btn-primary(href='javascript:;', role='button') Button
+                        a.btn.btn-default(href='javascript:;', role='button') Button
+          // end Thumbnails
+          // Meida
+          .panel.panel-default
+            .panel-heading
+              strong
+                span.glyphicon.glyphicon-th
+                |  Media
+            .panel-body
+              .media
+                .media-body
+                  ul.list-unstyled.list-info
+                    li
+                      span.icon.glyphicon.glyphicon-user
+                      label User name
+                      |                                     {{main.name}}
+                    li
+                      span.icon.glyphicon.glyphicon-envelope
+                      label Email
+                      |                                     lisa@doe.com
+                    li
+                      span.icon.glyphicon.glyphicon-home
+                      label Address
+                      |                                     Street 123, Avenue 45, Country
+                    li
+                      span.icon.glyphicon.glyphicon-earphone
+                      label Contact
+                      |                                     (+012) 345 6789
+                    li
+                      span.icon.glyphicon.glyphicon-flag
+                      label Nationality
+                      |                                     Australia
+                    li
+                      span.icon.glyphicon.glyphicon-globe
+                      label Website
+                      |                                     www.site.com
+          // end Media
+          section.panel.panel-box(data-ng-controller='sparklineCtrl')
+            .panel-top.bg-success
+              div(data-sparkline='', data-data='demoData1.data', data-options='demoData1.options')
+            .list-justified-container
+              ul.list-justified.text-center
+                li
+                  p.size-h3 575
+                  p.text-muted Daily Page View
+                li
+                  p.size-h3 23
+                  p.text-muted Sales

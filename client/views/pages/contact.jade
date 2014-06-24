@@ -1,0 +1,32 @@
+html
+  body
+    .page.page-contact
+      .contactmap-container
+        map.ui-map(zoom='14', center='[40.74, -74.18]', scrollwheel='false')
+          marker(position='[40.74, -74.18]', title='marker', animation='Animation.DROP')
+      .contact-info-container.clearfix
+        ul.contact-info
+          li
+            i.fa.fa-map-marker
+            span 1234 Durfee Ave, Newark NJ
+          li
+            i.fa.fa-phone
+            span 123 4567
+          li
+            i.fa.fa-envelope-o
+            span
+              a(href='mailto:contact@mail.com') contact@mail.com
+      .social-item-container
+        .row
+          .col-md-3.col-xsm-6.social-item.text-center
+            a.btn.btn-facebook.btn-metro(href='javascript:;')
+              i.fa.fa-facebook
+          .col-md-3.col-xsm-6.social-item.text-center
+            a.btn.btn-twitter.btn-metro(href='javascript:;')
+              i.fa.fa-twitter
+          .col-md-3.col-xsm-6.social-item.text-center
+            a.btn.btn-gplus.btn-metro(href='javascript:;')
+              i.fa.fa-google-plus
+          .col-md-3.col-xsm-6.social-item.text-center
+            a.btn.btn-instagram.btn-metro(href='javascript:;')
+              i.fa.fa-instagram

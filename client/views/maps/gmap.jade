@@ -1,0 +1,27 @@
+html
+  body
+    .page
+      section.panel.panel-default
+        .panel-heading
+          strong
+            span.glyphicon.glyphicon-th
+            |  Google Map
+        .panel-body
+          map.ui-map(zoom='11', center='[40.74, -74.18]', scrollwheel='false')
+            marker(position='[40.72, -74.20]', title='marker', animation='Animation.DROP')
+            marker(position='[40.73, -74.19]', title='drag me', draggable='true')
+      section.panel.panel-default
+        .panel-heading
+          strong
+            span.glyphicon.glyphicon-th
+            |  Dynamic Map
+        .panel-body(data-ng-controller='MapDemoCtrl')
+          map.ui-map(zoom='14', center='[43.6650000, -79.4103000]')
+      section.panel.panel-default
+        .panel-heading
+          strong
+            span.glyphicon.glyphicon-th
+            |  Styled Map
+        .panel-body
+          map.ui-map(zoom='11', center='[40.73, -74.19]', scrollwheel='false', styles='[{"featureType": "all", "stylers": [{ "saturation": -100 } ] }]')
+            marker(position='[40.73, -74.19]', title='drag me', draggable='true')

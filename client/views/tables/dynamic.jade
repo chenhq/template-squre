@@ -1,0 +1,54 @@
+html
+  body
+    .page.page-table(data-ng-controller='tableCtrl')
+      section.panel.panel-default.table-dynamic
+        .panel-heading
+          strong
+            span.glyphicon.glyphicon-th
+            |  Bordered table
+        .table-filters
+          .row
+            .col-sm-4.col-xs-6
+              form
+                input.form-control(type='text', placeholder='search', data-ng-model='searchKeywords', data-ng-keyup='search()')
+            .col-sm-3.col-xs-6.filter-result-info
+              span
+                | Showing {{filteredStores.length}}/{{stores.length}} entries
+        table.table.table-bordered.table-striped.table-responsive
+          thead
+            tr
+              th
+                .th
+                  | Store Name
+                  span.glyphicon.glyphicon-chevron-up(data-ng-click=" order('name') ", data-ng-class="{active: row == 'name'}")
+                  span.glyphicon.glyphicon-chevron-down(data-ng-click=" order('-name') ", data-ng-class="{active: row == '-name'}")
+              th
+                .th
+                  | Price
+                  span.glyphicon.glyphicon-chevron-up(data-ng-click=" order('price') ", data-ng-class="{active: row == 'price'}")
+                  span.glyphicon.glyphicon-chevron-down(data-ng-click=" order('-price') ", data-ng-class="{active: row == '-price'}")
+              th
+                .th
+                  | Sales (in 30 days)
+                  span.glyphicon.glyphicon-chevron-up(data-ng-click=" order('sales') ", data-ng-class="{active: row == 'sales'}")
+                  span.glyphicon.glyphicon-chevron-down(data-ng-click=" order('-sales') ", data-ng-class="{active: row == '-sales'}")
+              th
+                .th
+                  | Rating
+                  span.glyphicon.glyphicon-chevron-up(data-ng-click=" order('rating') ", data-ng-class="{active: row == 'rating'}")
+                  span.glyphicon.glyphicon-chevron-down(data-ng-click=" order('-rating') ", data-ng-class="{active: row == '-rating'}")
+          tbody
+            tr(data-ng-repeat='store in currentPageStores')
+              td {{store.name}}
+              td {{store.price}}
+              td {{store.sales}}
+              td {{store.rating}}
+        footer.table-footer
+          .row
+            .col-md-6.page-num-info
+              span
+                | Show 
+                select(data-ng-model='numPerPage', data-ng-options='num for num in numPerPageOpt', data-ng-change='onNumPerPageChange()')
+                |                         entries per page
+            .col-md-6.text-right.pagination-container
+              pagination.pagination-sm(page='currentPage', total-items='filteredStores.length', max-size='4', on-select-page='select(page)', items-per-page='numPerPage', rotate='false', boundary-links='true')

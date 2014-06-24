@@ -1,0 +1,70 @@
+html
+  body
+    .page.page-charts(data-ng-controller='morrisChartCtrl')
+      .row
+        .col-md-6
+          section.panel.panel-default
+            .panel-heading
+              span.glyphicon.glyphicon-th
+              |  Line Chart
+            .panel-body
+              div(morris-chart='', data-data='simpleData', data-type='line', data-xkey='year', data-ykeys='["value"]', data-labels='["Value"]', data-line-colors='["#31C0BE"]', data-line-width='2')
+        .col-md-6
+          section.panel.panel-default
+            .panel-heading
+              span.glyphicon.glyphicon-th
+              |  Area Chart
+            .panel-body
+              div(morris-chart='', data-data='simpleData', data-type='area', data-xkey='year', data-ykeys='["value"]', data-labels='["Value A"]', data-line-colors='["#31C0BE"]', data-line-width='2')
+      .row
+        .col-md-6
+          section.panel.panel-default
+            .panel-heading
+              span.glyphicon.glyphicon-th
+              |  Line Chart
+            .panel-body
+              div(morris-chart='', data-data='comboData', data-type='line', data-xkey='year', data-ykeys='["a", "b", "c"]', data-labels='["Value A", "Value B", "Value C"]', data-line-colors='["#8170CA","#E87352","#60CD9B"]', data-line-width='2')
+        .col-md-6
+          section.panel.panel-default
+            .panel-heading
+              span.glyphicon.glyphicon-th
+              |  Area Chart
+            .panel-body
+              div(morris-chart='', data-data='comboData', data-type='area', data-xkey='year', data-ykeys='["a", "b", "c"]', data-labels='["Value A", "Value B", "Value C"]', data-line-colors='["#8170CA","#E87352","#60CD9B"]', data-line-width='2')
+      .row
+        .col-md-6
+          section.panel.panel-default
+            .panel-heading
+              span.glyphicon.glyphicon-th
+              |  Bar Chart
+            .panel-body
+              div(morris-chart='', data-data='comboData', data-type='bar', data-xkey='year', data-ykeys='["a", "b", "c"]', data-labels='["Value A", "Value B", "Value C"]', data-bar-colors='["#31C0BE","#8170CA","#66B5D7"]')
+        .col-md-6
+          section.panel.panel-default
+            .panel-heading
+              span.glyphicon.glyphicon-th
+              |  Stacked Bar Chart
+            .panel-body
+              div(morris-chart='', data-data='comboData', data-type='bar', data-xkey='year', data-ykeys='["a", "b", "c"]', data-labels='["Value A", "Value B", "Value C"]', data-bar-colors='["#8170CA","#31C0BE","#EEC95A"]', data-stacked='true')
+      .row
+        .col-md-4
+          section.panel.panel-default
+            .panel-heading
+              span.glyphicon.glyphicon-th
+              |  Donut Chart
+            .panel-body
+              div(morris-chart='', data-data='donutData', data-type='donut', data-xkey='year')
+        .col-md-4
+          section.panel.panel-default
+            .panel-heading
+              span.glyphicon.glyphicon-th
+              |  Colorful Donut Chart
+            .panel-body
+              div(morris-chart='', data-data='donutData', data-type='donut', data-xkey='year', data-colors='["#60CD9B","#66B5D7","#EEC95A","#E87352"]')
+        .col-md-4
+          section.panel.panel-default
+            .panel-heading
+              span.glyphicon.glyphicon-th
+              |  Formatted Donut Chart
+            .panel-body
+              div(morris-chart='', data-data='donutData', data-type='donut', data-xkey='year', data-formatter="return '$' + y;")

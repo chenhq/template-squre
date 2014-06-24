@@ -1,0 +1,405 @@
+html
+  body
+    section.page-form-ele.page
+      // Rating
+      section.panel.panel-default
+        .panel-heading
+          strong
+            span.glyphicon.glyphicon-th
+            |  Rating
+        .panel-body(data-ng-controller='RatingDemoCtrl')
+          .row
+            .col-md-6
+              rating.ui-rating.size-h3(value='rate', max='max', readonly='isReadonly', on-hover='hoveringOver(value)', on-leave='overStar = null', state-on="'fa fa-star'", state-off="'fa fa-star-o'")
+              span.label(ng-class="{'label-warning': percent<30, 'label-info': percent>=30 && percent<70, 'label-success': percent>=70}", ng-show='overStar && !isReadonly') {{percent}}%
+              .callout.callout-info
+                p
+                  | Rate: 
+                  b {{rate}}
+                  |  - Readonly is: 
+                  i {{isReadonly}}
+                  |  - Hovering over: 
+                  b {{overStar || &quot;none&quot;}}
+              button.btn.btn-danger(ng-click='rate = 0', ng-disabled='isReadonly') Clear
+              button.btn.btn-info(ng-click='isReadonly = ! isReadonly') Toggle Readonly
+            .col-md-6
+              h5 Colorful and Sizing
+              rating.ui-rating.size-h4.ui-rating-success(value='4', max='6', readonly='true', state-on="'fa fa-star'", state-off="'fa fa-star-o'")
+              br
+              rating.ui-rating.size-h3.ui-rating-info(value='5', max='7', readonly='true', state-on="'fa fa-star'", state-off="'fa fa-star-o'")
+              br
+              rating.ui-rating.size-h2.ui-rating-warning(value='6', max='8', readonly='true', state-on="'fa fa-star'", state-off="'fa fa-star-o'")
+              br
+              rating.ui-rating.size-h1.ui-rating-danger(value='7', max='9', readonly='true', state-on="'fa fa-star'", state-off="'fa fa-star-o'")
+      // end Rating
+      // Switch
+      section.panel.panel-default
+        .panel-heading
+          strong
+            span.glyphicon.glyphicon-th
+            |  Switchs
+        .panel-body
+          label.switch
+            input(type='checkbox', checked='')
+            i
+          .space
+          label.switch.switch-success
+            input(type='checkbox', checked='')
+            i
+          .space
+          label.switch.switch-info
+            input(type='checkbox', checked='')
+            i
+          .space
+          label.switch.switch-warning
+            input(type='checkbox', checked='')
+            i
+          .space
+          label.switch.switch-danger
+            input(type='checkbox', checked='')
+            i
+      // end Switch
+      // Range sliders
+      section.panel.panel-default
+        .panel-heading
+          strong
+            span.glyphicon.glyphicon-th
+            |  Slider
+        .panel-body
+          .row
+            .col-md-6
+              h5 Basic slider
+              input(type='text', ui-range-slider='', data-slider-min='0', data-slider-max='10', data-slider-step='1', data-slider-orientation='horizontal', data-slider-value='6', data-slider-selection='before', data-slider-tooltip='show', data-slider-handle='round')
+              h5 Range slider disabled
+              input(type='text', ui-range-slider='', data-slider-min='0', data-slider-max='10', data-slider-step='1', data-slider-orientation='horizontal', data-slider-value='5', data-slider-selection='before', data-slider-tooltip='show', data-slider-handle='round', data-slider-enabled='false')
+              h5 Range slider with step set to 10
+              input(type='text', value='', ui-range-slider='', data-slider-min='0', data-slider-max='100', data-slider-step='10', data-slider-orientation='horizontal', data-slider-value='60', data-slider-selection='before', data-slider-tooltip='show', data-slider-handle='round')
+              h5 Range slider with predifined value to 30
+              input(type='text', value='', ui-range-slider='', data-slider-min='0', data-slider-max='100', data-slider-step='10', data-slider-orientation='horizontal', data-slider-value='30', data-slider-selection='before', data-slider-tooltip='show', data-slider-handle='round')
+              h5 Range slider with range
+              input(type='text', value='', ui-range-slider='', data-slider-min='0', data-slider-max='100', data-slider-step='10', data-slider-orientation='horizontal', data-slider-value='[20, 80]', data-slider-selection='before', data-slider-tooltip='show', data-slider-handle='round')
+            .col-md-6
+              h5 Vertical slider
+              .space.space-lg
+              input(type='text', ui-range-slider='', data-slider-min='0', data-slider-max='10', data-slider-step='1', data-slider-orientation='vertical', data-slider-value='5', data-slider-selection='before', data-slider-tooltip='show', data-slider-handle='round')
+              .space.space-lg
+              input(type='text', value='', ui-range-slider='', data-slider-min='0', data-slider-max='100', data-slider-step='10', data-slider-orientation='vertical', data-slider-value='50', data-slider-selection='before', data-slider-tooltip='show', data-slider-handle='round')
+              .space.space-lg
+              input(type='text', value='', ui-range-slider='', data-slider-min='0', data-slider-max='100', data-slider-step='10', data-slider-orientation='vertical', data-slider-value='30', data-slider-selection='before', data-slider-tooltip='show', data-slider-handle='round')
+              .space.space-lg
+              input(type='text', value='', ui-range-slider='', data-slider-min='0', data-slider-max='100', data-slider-step='10', data-slider-orientation='vertical', data-slider-value='[10, 90]', data-slider-selection='before', data-slider-tooltip='show', data-slider-handle='round')
+      // end Range sliders
+      // Radio buttons and checkbox
+      section.panel.panel-default
+        .panel-heading
+          strong
+            span.glyphicon.glyphicon-th
+            |  Radio Buttons and Checkbox
+        .panel-body
+          dl.dl-horizontal
+            dt Radio buttons
+            dd
+              label.ui-radio
+                input(name='radio1', type='radio', value='option1')
+                span Option 1
+              label.ui-radio
+                input(name='radio1', type='radio', value='option2', checked='')
+                span Option 2
+              label.ui-radio
+                input(name='radio1', type='radio', value='option3')
+                span Option 3
+            dt Disabled radio buttons
+            dd
+              label.ui-radio
+                input(name='radio2', type='radio', value='option3', disabled='')
+                span Radio disabled
+              label.ui-radio
+                input(name='radio2', type='radio', value='option4', checked='', disabled='')
+                span Radio checked disabled
+          dl.dl-horizontal
+            dt Checkbox
+            dd
+              label.ui-checkbox
+                input(name='checkbox1', type='checkbox', value='option1')
+                span Option 1
+              label.ui-checkbox
+                input(name='checkbox1', type='checkbox', value='option2', checked='')
+                span Option 2
+              label.ui-checkbox
+                input(name='checkbox1', type='checkbox', value='option3')
+                span Option 3
+            dt Disabled checkbox
+            dd
+              label.ui-checkbox
+                input(name='checkbox2', type='checkbox', value='option3', disabled='')
+                span Radio disabled
+              label.ui-checkbox
+                input(name='checkbox2', type='checkbox', value='option4', checked='', disabled='')
+                span Radio checked disabled
+      // end Radio buttons and checkbox
+      // Select
+      section.panel.panel-default
+        .panel-heading
+          strong
+            span.glyphicon.glyphicon-th
+            |  Select
+        .panel-body
+          span.ui-select
+            select
+              option Mustard
+              option Ketchup
+              option Barbecue
+      // end Select
+      // Spinner
+      section.panel.panel-default
+        .panel-heading
+          strong
+            span.glyphicon.glyphicon-th
+            |  Spinner
+        .panel-body
+          .row
+            .col-xs-4
+              .input-group(data-ui-spinner='')
+                input.form-control(type='text', value='1')
+                .input-group-btn.btn-group-vertical
+                  button.btn.btn-xs.btn-default(type='button', data-spin='up')
+                    i.fa.fa-angle-up
+                  button.btn.spinner-down.btn-xs.btn-default(type='button', data-spin='down')
+                    i.fa.fa-angle-down
+            .col-xs-4
+              .input-group(data-ui-spinner='')
+                span.input-group-btn
+                  button.btn.btn-primary(type='button', data-spin='up')
+                    i.fa.fa-plus
+                input.spinner-input.form-control(type='text')
+                span.input-group-btn
+                  button.btn.btn-default(type='button', data-spin='down')
+                    i.fa.fa-minus
+      // end Spinner
+      // File upload button
+      section.panel.panel-default
+        .panel-heading
+          strong
+            span.glyphicon.glyphicon-th
+            |  File upload button
+        .panel-body
+          input(type='file', title='Choose File', data-ui-file-upload='')
+          .space
+          input.btn-primary(type='file', title='Choose File', data-ui-file-upload='')
+          .space
+          input.btn-success(type='file', title='Choose File', data-ui-file-upload='')
+          .space
+          input.btn-info(type='file', title='Choose File', data-ui-file-upload='')
+          .space
+          input.btn-warning(type='file', title='Choose File', data-ui-file-upload='')
+          .space
+          input.btn-danger(type='file', title='Choose File', data-ui-file-upload='')
+      // end File upload button
+      // Typeahead
+      section.panel.panel-default
+        .panel-heading
+          strong
+            span.glyphicon.glyphicon-th
+            |  Typeahead (Autocomplete)
+        .panel-body(data-ng-controller='TypeaheadCtrl')
+          .callout.callout-info
+            p State is: {{selected}}
+          .row
+            .col-sm-2
+              input.form-control(type='text', ng-model='selected', typeahead='state for state in states | filter:$viewValue | limitTo:8', placeholder='Search')
+      // end Typeahead
+      // Datepicker
+      section.panel.panel-default
+        .panel-heading
+          strong
+            span.glyphicon.glyphicon-th
+            |  Datepicker
+        .panel-body(data-ng-controller='DatepickerDemoCtrl')
+          .row
+            .col-sm-4
+              .input-group.ui-datepicker
+                span.input-group-addon
+                  i.fa.fa-calendar
+                input.form-control(type='text', datepicker-popup='{{format}}', ng-model='dt', is-open='opened', min='minDate', max="'2015-06-22'", datepicker-options='dateOptions', date-disabled='disabled(date, mode)', ng-required='true', close-text='Close')
+              .callout.callout-info
+                p Date is: {{dt | date:&apos;fullDate&apos;}}
+            .col-sm-8
+              p
+                | Format:
+                span.ui-select
+                  select(ng-model='format', ng-options='f for f in formats')
+              button.btn.btn-sm.btn-info(ng-click='today()') Today
+              .space
+              button.btn.btn-sm.btn-default(ng-click="dt = '2009-08-24'") 2009-08-24
+              .space
+              button.btn.btn-sm.btn-success(ng-click='toggleWeeks()', tooltip='For inline datepicker') Toggle Weeks
+              .space
+              button.btn.btn-sm.btn-danger(ng-click='clear()') Clear
+              .space
+              button.btn.btn-sm.btn-default(ng-click='toggleMin()', tooltip='After today restriction') Min date
+      // end Datepicker
+      // Timepicker
+      section.panel.panel-default
+        .panel-heading
+          strong
+            span.glyphicon.glyphicon-th
+            |  Timepicker
+        .panel-body(data-ng-controller='TimepickerDemoCtrl')
+          .row
+            .col-sm-4
+              div(ng-model='mytime', ng-change='changed()', style='display:inline-block;')
+                timepicker.ui-timepicker(hour-step='hstep', minute-step='mstep', show-meridian='ismeridian')
+              .callout.callout-info
+                p Time is: {{mytime | date:&apos;shortTime&apos; }}
+            .col-sm-8
+              p
+                | Hours step is: 
+                span.space
+                span.ui-select
+                  select(ng-model='hstep', ng-options='opt for opt in options.hstep')
+              p
+                | Minutes step is: 
+                span.ui-select
+                  select(ng-model='mstep', ng-options='opt for opt in options.mstep')
+              button.btn.btn-info(ng-click='toggleMode()') 12H / 24H
+              .space
+              button.btn.btn-default(ng-click='update()') Set to 14:00
+              .space
+              button.btn.btn-danger(ng-click='clear()') Clear
+      // end Timepicker
+      // Input
+      section.panel.panel-default
+        .panel-heading
+          strong
+            span.glyphicon.glyphicon-th
+            |  Inputs, Input Variants, Textarea
+        .panel-body
+          form.form-horizontal
+            .form-group
+              label.col-sm-2(for='') Normal input
+              .col-sm-10
+                input.form-control(type='text')
+            .form-group
+              label.col-sm-2(for='label-focus') Label focus
+              .col-sm-10
+                input#label-focus.form-control(type='text')
+            .form-group
+              label.col-sm-2(for='') With help
+              .col-sm-10
+                input.form-control(type='text')
+                span.help-block Some help text goes here.
+            .form-group
+              label.col-sm-2(for='') Password
+              .col-sm-10
+                input.form-control(type='password')
+            .form-group
+              label.col-sm-2(for='') Placeholder
+              .col-sm-10
+                input.form-control(type='text', placeholder='placeholder goes here')
+            .form-group
+              label.col-sm-2(for='') Disabled
+              .col-sm-10
+                input.form-control(type='text', disabled='', value='disabled')
+            .form-group
+              label.col-sm-2(for='') Predefined value
+              .col-sm-10
+                input.form-control(type='text', value='http://')
+            .form-group
+              label.col-sm-2(for='') Input with tooltip on focus
+              .col-sm-10
+                input.form-control(tooltip='Tooltip on top', type='text', data-toggle='tooltip', data-placement='top', tooltip-trigger='focus')
+            .form-group
+              label.col-sm-2(for='') Input with icons
+              .col-sm-10
+                input.form-control(type='text')
+                span.icon.glyphicon.glyphicon-star
+            .form-group
+              label.col-sm-2(for='') Input primary
+              .col-sm-10
+                input.form-control.input-primary(type='text')
+            .form-group
+              label.col-sm-2(for='') Input info
+              .col-sm-10
+                input.form-control.input-info(type='text')
+            .form-group
+              label.col-sm-2(for='') Input success
+              .col-sm-10
+                input.form-control.input-success(type='text')
+            .form-group
+              label.col-sm-2(for='') Input warning
+              .col-sm-10
+                input.form-control.input-warning(type='text')
+            .form-group
+              label.col-sm-2(for='') Input error
+              .col-sm-10
+                input.form-control.input-danger(type='text')
+            .form-group
+              label.col-sm-2(for='') Control sizing
+              .col-sm-10
+                input.form-control.input-lg(type='text')
+                .divider
+                input.form-control(type='text')
+                .divider
+                input.form-control.input-sm(type='text')
+            .form-group
+              label.col-sm-2(for='') Input Group
+              .col-sm-10
+                .input-group
+                  span.input-group-addon @
+                  input.form-control(type='text', placeholder='Username')
+                .divider
+                .input-group
+                  input.form-control(type='text')
+                  span.input-group-addon .00
+                .divider
+                .input-group
+                  span.input-group-addon $
+                  input.form-control(type='text')
+                  span.input-group-addon .00
+            .form-group
+              label.col-sm-2(for='') Button addons
+              .col-sm-10
+                .row
+                  .col-lg-6
+                    .input-group
+                      span.input-group-btn
+                        button.btn.btn-default(type='button') Go!
+                      input.form-control(type='text')
+                  .col-lg-6
+                    .input-group
+                      input.form-control(type='text')
+                      span.input-group-btn
+                        button.btn.btn-default(type='button') Go!
+            .form-group
+              label.col-sm-2(for='') Textarea
+              .col-sm-10
+                textarea.form-control(name='', rows='4')
+      // end Input
+      // Tags
+      section.panel.panel-default
+        .panel-heading
+          strong
+            span.glyphicon.glyphicon-th
+            |  Tags Input
+        .panel-body(data-ng-controller='TagsDemoCtrl')
+          tags-input.ui-tags-input(ng-model='tags')
+      // end Tags
+      // Upload
+      section.panel.panel-default
+        .panel-heading
+          strong
+            span.glyphicon.glyphicon-th
+            |  File upload with Drag and Drop
+        .panel-body
+          div
+            .drop-box Drag and drop files here
+      // end Upload
+      // Editor
+      section.panel.panel-default
+        .panel-heading
+          strong
+            span.glyphicon.glyphicon-th
+            |  Editor
+        .panel-body
+          .ui-editor(text-angular='', ng-model='mailContent')
+      // end Editor

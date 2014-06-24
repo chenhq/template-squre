@@ -1,0 +1,27 @@
+html
+  body
+    .page(data-ng-controller='jqvmapCtrl')
+      section.panel.panel-default
+        .panel-heading
+          strong
+            span.glyphicon.glyphicon-th
+            |  World Map
+        .panel-body
+          .ui-map(ui-jqvmap='', options='worldMap')
+      .row
+        .col-md-6
+          section.panel.panel-default
+            .panel-heading
+              strong
+                span.glyphicon.glyphicon-th
+                |  USA Map
+            .panel-body
+              .ui-map(ui-jqvmap='', options='USAMap')
+        .col-md-6
+          section.panel.panel-default
+            .panel-heading
+              strong
+                span.glyphicon.glyphicon-th
+                |  Europe Map
+            .panel-body
+              .ui-map(ui-jqvmap='', options='europeMap')
